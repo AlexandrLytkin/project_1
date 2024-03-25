@@ -1,4 +1,5 @@
 import yfinance as yf
+import numpy as np
 
 """- Отвечает за загрузку данных об акциях.
 - Содержит функции для извлечения данных об акциях из интернета и расчёта скользящего среднего."""
@@ -22,5 +23,19 @@ def calculate_and_display_average_price(data):
     """Функция принимает DataFrame и вычисляет среднее значение колонки 'Close'.
     Результат будет выводиться в консоль.
     Вычисляет и выводит среднюю цену закрытия акций за заданный период."""
-    res = data['Moving_Average'] = data['Close']
+    res = data['Close']
     print('Средняя цена закрытия акций за заданный период', round(sum(res) / len(res), 2))
+
+
+def notify_if_strong_fluctuations(data, threshold):
+    """Функция будет вычислять максимальное и минимальное значения цены закрытия и сравнивать разницу с
+    заданным порогом. Если разница превышает порог, пользователь получает уведомление."""
+    max_price = round(data['Close'].max(), 2)
+    min_price = round(data['Close'].min(), 2)
+    if float(threshold) > max_price:
+        percent = float(threshold) / max_price * 100 - 100
+        print(f'Цена акций колебалась на заданный период более чем на {round(percent, 2)} % процентов')
+    elif float(threshold) < min_price:
+        percent = float(threshold) / max_price * 100 - 100
+        print(f'Цена акций колебалась на заданный период мене чем на {round(percent, 2)} % процентов')
+

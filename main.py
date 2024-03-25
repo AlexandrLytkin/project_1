@@ -22,7 +22,10 @@ def main():
     ticker = input("Введите тикер акции (например, «AAPL» для Apple Inc):»")
 
     #  Valid periods: 1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max
-    period = input("Введите период для данных (например, '1mo' для одного месяца): ")
+    period = input("Введите период для данных (например, '1mo' для одного месяца):")
+
+    # Closing price values
+    threshold = input("Введите значения цены закрытия (например 180.00), если разница превысит порог, вы получите уведомление:")
 
     # Fetch stock data
     stock_data = dd.fetch_stock_data(ticker, period)
@@ -36,6 +39,11 @@ def main():
     # Сalculates and displays the low closing price of shares for a given period
     dd.calculate_and_display_average_price(stock_data)
 
+    # Notification about strong hesitates
+    dd.notify_if_strong_fluctuations(stock_data, threshold)
+
 
 if __name__ == "__main__":
     main()
+
+

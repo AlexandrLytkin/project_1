@@ -32,10 +32,6 @@ def notify_if_strong_fluctuations(data, threshold):
     заданным порогом. Если разница превышает порог, пользователь получает уведомление."""
     max_price = round(data['Close'].max(), 2)
     min_price = round(data['Close'].min(), 2)
-    if float(threshold) > max_price:
-        percent = float(threshold) / max_price * 100 - 100
-        print(f'Цена акций колебалась на заданный период более чем на {round(percent, 2)} % процентов')
-    elif float(threshold) < min_price:
-        percent = float(threshold) / max_price * 100 - 100
-        print(f'Цена акций колебалась на заданный период мене чем на {round(percent, 2)} % процентов')
-
+    percent = round(max_price / min_price * 100 - 100, 2)
+    if percent > int(threshold):
+        print(f'Цена акций колебалась более чем на заданный процент "{threshold}%" за период')

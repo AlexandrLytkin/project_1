@@ -24,8 +24,8 @@ def main():
     #  Valid periods: 1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max
     period = input("Введите период для данных (например, '1mo' для одного месяца):")
 
-    # Closing price values
-    threshold = input("Введите значения цены закрытия (например 180.00), если разница превысит порог, вы получите уведомление:")
+    # Check max and min values in percent threshold
+    threshold = input("Введите процентный порог колебания акции от мин к мак (например 1, 3, 5, ...):")
 
     # Fetch stock data
     stock_data = dd.fetch_stock_data(ticker, period)

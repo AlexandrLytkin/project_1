@@ -20,12 +20,19 @@ def main():
 
     #  Тикер акции
     ticker = input("Введите тикер акции (например, «AAPL» для Apple Inc):»")
+#     ticker = "AAPL"  # short for dev
 
     #  Valid periods: 1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max
     period = input("Введите период для данных (например, '1mo' для одного месяца):")
+#     period = '1mo'  # short for dev
 
     # Check max and min values in percent threshold
     threshold = int(input("Введите процентный порог колебания акции от мин к мак (например 1, 3, 5, ...):"))
+#     threshold = 10  # short for dev
+
+    # File name for CSV файла
+    filename = input("Введите имя файла (например, aapl, googl, ...)для сохранения загруженных данных об акциях:")
+#     filename = 'aapl'  # short for dev
 
     # Fetch stock data
     stock_data = dd.fetch_stock_data(ticker, period)
@@ -41,6 +48,9 @@ def main():
 
     # Notification about strong hesitates
     dd.notify_if_strong_fluctuations(stock_data, threshold)
+
+    # Saves data to the specified file
+    dd.export_data_to_csv(stock_data, filename)
 
 
 if __name__ == "__main__":

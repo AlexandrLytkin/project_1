@@ -1,5 +1,6 @@
 import yfinance as yf
 import numpy as np
+import csv
 
 """- Отвечает за загрузку данных об акциях.
 - Содержит функции для извлечения данных об акциях из интернета и расчёта скользящего среднего."""
@@ -35,3 +36,10 @@ def notify_if_strong_fluctuations(data, threshold):
     percent = round(max_price / min_price * 100 - 100, 2)
     if percent > threshold:
         print(f'Цена акций колебалась более чем на заданный процент "{threshold}%" за период')
+
+
+def export_data_to_csv(data, filename):
+    """Cохраняем загруженные данные об акциях в CSV файл.
+    Функция будет принимать DataFrame и имя файла, после чего сохранять данные в указанный файл."""
+    data.to_csv(filename + '.csv')
+    print(f'Файл сохранен в {filename}.csv')

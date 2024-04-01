@@ -25,7 +25,7 @@ def main():
     period = input("Введите период для данных (например, '1mo' для одного месяца):")
 
     # Check max and min values in percent threshold
-    threshold = input("Введите процентный порог колебания акции от мин к мак (например 1, 3, 5, ...):")
+    threshold = int(input("Введите процентный порог колебания акции от мин к мак (например 1, 3, 5, ...):"))
 
     # Fetch stock data
     stock_data = dd.fetch_stock_data(ticker, period)

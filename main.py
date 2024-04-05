@@ -19,20 +19,20 @@ def main():
         " 1д, 5д, 1мес, 3мес, 6мес, 1г, 2г, 5г, 10л, с начала года, макс.")
 
     #  Тикер акции
-    ticker = input("Введите тикер акции (например, «AAPL» для Apple Inc):»")
-#     ticker = "AAPL"  # short for dev
+    # ticker = input("Введите тикер акции (например, «AAPL» для Apple Inc):»")
+    ticker = "GOOGL"  # short for dev
 
     #  Valid periods: 1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max
-    period = input("Введите период для данных (например, '1mo' для одного месяца):")
-#     period = '1mo'  # short for dev
+    # period = input("Введите период для данных (например, '1mo' для одного месяца, а также варианты ):")
+    period = '1y'  # short for dev
 
     # Check max and min values in percent threshold
-    threshold = int(input("Введите процентный порог колебания акции от мин к мак (например 1, 3, 5, ...):"))
-#     threshold = 10  # short for dev
+    # threshold = int(input("Введите процентный порог колебания акции от мин к мак (например 1, 3, 5, ...):"))
+    threshold = 10  # short for dev
 
     # File name for CSV файла
-    filename = input("Введите имя файла (например, aapl, googl, ...)для сохранения загруженных данных об акциях:")
-#     filename = 'aapl'  # short for dev
+    # filename = input("Введите имя файла (например, aapl, googl, ...)для сохранения загруженных данных об акциях:")
+    filename = 'googl'  # short for dev
 
     # Fetch stock data
     stock_data = dd.fetch_stock_data(ticker, period)

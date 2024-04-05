@@ -42,8 +42,12 @@ def notify_if_strong_fluctuations(data, threshold):
 def export_data_to_csv(data, filename):
     """Cохраняем загруженные данные об акциях в CSV файл.
     Функция будет принимать DataFrame и имя файла, после чего сохранять данные в указанный файл."""
-    data.to_csv(filename + '.csv')
-    print(f'Файл сохранен в {filename}.csv')
+    try:
+        data.to_csv(filename + '.csv')
+        print(f'Файл сохранен в {filename}.csv')
+    except Exception as ex:
+        print(f'Файл не был сохранен в {filename}.csv возникла ошибка: {ex}')
+
 
 def calculate_macd(data, n_fast=12, n_slow=26):
     """Рассчитывает индикатор MACD (Moving Average Convergence Divergence).

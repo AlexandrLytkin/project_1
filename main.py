@@ -1,5 +1,6 @@
 import data_download as dd
 import data_plotting as dplt
+import datetime
 
 
 def main():
@@ -16,15 +17,24 @@ def main():
         " AMZN (Amazon.com Inc), TSLA (Tesla Inc).")
     print(
         "Общие периоды времени для данных о запасах включают:"
-        " 1д, 5д, 1мес, 3мес, 6мес, 1г, 2г, 5г, 10л, с начала года, макс.")
+        " 1д, 5д, 1мес, 3мес, 6мес, 1г, 2г, 5г, 10л, с начала года, макс.\n")
 
     #  Тикер акции
     # ticker = input("Введите тикер акции (например, «AAPL» для Apple Inc):»")
     ticker = "GOOGL"  # short for dev
 
-    #  Valid periods: 1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max
-    # period = input("Введите период для данных (например, '1mo' для одного месяца, а также варианты ):")
+    valid_periods = "1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max"
+    # period = input(f"Введите период для данных (например, '1mo' для одного месяца, а также варианты {valid_periods}):")
     period = '1y'  # short for dev
+
+    # Start date for the analysis (optional)
+    # start_date = input("Введите начало даты (YYYY-MM-DD) для анализа биржевых данных (или оставить пустым для значения по умолчанию): ")
+    start_date = '2023-01-01'  # short for dev
+
+    # End date for the analysis (optional)
+    # end_date = input("Введите конец даты (YYYY-MM-DD) для анализа биржевых данных (или оставить пустым для значения по умолчанию): ")
+    today = datetime.date.today()
+    end_date = today  # short for dev
 
     # Check max and min values in percent threshold
     # threshold = int(input("Введите процентный порог колебания акции от мин к мак (например 1, 3, 5, ...):"))
@@ -35,7 +45,7 @@ def main():
     filename = 'googl'  # short for dev
 
     # Fetch stock data
-    stock_data = dd.fetch_stock_data(ticker, period)
+    stock_data = dd.fetch_stock_data(ticker, period, start=start_date, end=end_date)
 
     # Add moving average to the data
     stock_data = dd.add_moving_average(stock_data)
@@ -55,5 +65,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

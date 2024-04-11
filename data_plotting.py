@@ -2,7 +2,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-def create_and_save_plot(data, ticker, period, filename=None):
+def create_and_save_plot(data, ticker, period, style, filename=None):
+    plt.style.use(style)
     """- Отвечает за визуализацию данных.
     - Содержит функции для создания и сохранения графиков цен закрытия и скользящих средних.
     Создаёт график, отображающий цены закрытия и скользящие средние. Предоставляет возможность сохранения графика в

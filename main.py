@@ -37,7 +37,7 @@ def main():
 
         # End date for the analysis (optional)
         end_date = input("Введите конец даты (YYYY-MM-DD) для анализа биржевых данных (или оставить пустым для значения по умолчанию): ")
-        # today = datetime.date.today()
+        # today = datetime.date.today()  # short for dev
         # end_date = today  # short for dev
 
     # Check max and min values in percent threshold

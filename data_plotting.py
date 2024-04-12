@@ -18,6 +18,7 @@ def create_and_save_plot(data, ticker, period, style, filename=None):
             plt.plot(dates, data['MACD_Line'].values, label='MACD Line')
             plt.plot(dates, data['Signal_Line'].values, label='Signal Line')
             plt.bar(dates, data['Histogram'].values, label='Histogram', color='orange')
+            period = period if period else str(dates[0])[:10]+'-'+str(dates[-1])[:10]
 
         else:
             print("Информация о дате отсутствует или не имеет распознаваемого формата.")

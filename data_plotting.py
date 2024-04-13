@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import data_download as dd
 
 
 def create_and_save_plot(data, ticker, period, style, filename=None):
@@ -36,6 +37,10 @@ def create_and_save_plot(data, ticker, period, style, filename=None):
     plt.xlabel("Дата")
     plt.ylabel("Цена")
     plt.legend()
+
+    std = dd.calculate_and_display_average_deviation(data)
+    plt.text(data.index[-1], data['Close'][-1], f"Std: {std:.2f}")
+    print(f"Стандартное отклонение цены закрытия акций:{std:.2f}")
 
     if filename is None:
         filename = f"{ticker}_{period}_stock_price_chart.png"

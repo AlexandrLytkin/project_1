@@ -1,6 +1,7 @@
 import data_download as dd
 import data_plotting as dplt
 import datetime
+import style_variants as st
 
 
 def main():
@@ -20,29 +21,32 @@ def main():
         " 1д, 5д, 1мес, 3мес, 6мес, 1г, 2г, 5г, 10л, с начала года, макс.\n")
 
     #  Тикер акции
-    # ticker = input("Введите тикер акции (например, «AAPL» для Apple Inc):»")
-    ticker = "GOOGL"  # short for dev
+    ticker = input("Введите тикер акции (например, «AAPL» для Apple Inc):")
+    # ticker = "GOOGL"  # short for dev
 
-    valid_periods = "1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max"
-    # period = input(f"Введите период для данных (например, '1mo' для одного месяца, а также варианты {valid_periods}):")
-    period = '1y'  # short for dev
+    period, start_date, end_date = '', '', ''
+    way = input("Введите число 1 или 2, какой именно вариант вы хотите использовать для вывода биржевых данных period(1) или конкретные даты(2):")
+    if way == '1':
+        valid_periods = "1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max"
+        period = input(f"Введите период для данных (например, '1mo' для одного месяца, а также варианты {valid_periods}):")
+        # period = '1y'  # short for dev
+    else:
+        # Start date for the analysis (optional)
+        start_date = input("Введите начало даты (YYYY-MM-DD) для анализа биржевых данных (или оставить пустым для значения по умолчанию): ")
+        # start_date = '2023-01-01'  # short for dev
 
-    # Start date for the analysis (optional)
-    # start_date = input("Введите начало даты (YYYY-MM-DD) для анализа биржевых данных (или оставить пустым для значения по умолчанию): ")
-    start_date = '2023-01-01'  # short for dev
-
-    # End date for the analysis (optional)
-    # end_date = input("Введите конец даты (YYYY-MM-DD) для анализа биржевых данных (или оставить пустым для значения по умолчанию): ")
-    today = datetime.date.today()
-    end_date = today  # short for dev
+        # End date for the analysis (optional)
+        end_date = input("Введите конец даты (YYYY-MM-DD) для анализа биржевых данных (или оставить пустым для значения по умолчанию): ")
+        # today = datetime.date.today()  # short for dev
+        # end_date = today  # short for dev
 
     # Check max and min values in percent threshold
-    # threshold = int(input("Введите процентный порог колебания акции от мин к мак (например 1, 3, 5, ...):"))
-    threshold = 10  # short for dev
+    threshold = int(input("Введите процентный порог колебания акции от мин к мак (например 1, 3, 5, ...):"))
+    # threshold = 10  # short for dev
 
     # File name for CSV файла
-    # filename = input("Введите имя файла (например, aapl, googl, ...)для сохранения загруженных данных об акциях:")
-    filename = 'googl'  # short for dev
+    filename = input("Введите имя файла (например, aapl, googl, ...)для сохранения загруженных данных об акциях:")
+    # filename = 'googl'  # short for dev
 
     # Fetch stock data
     stock_data = dd.fetch_stock_data(ticker, period, start=start_date, end=end_date)
@@ -50,8 +54,12 @@ def main():
     # Add moving average to the data
     stock_data = dd.add_moving_average(stock_data)
 
+    # Adding an option to select a graph style
+    style = input("Введите стиль оформления графика (например, dark_background, bmh, fast, ggplot и др.) или оставь пустым для классики:")
+    style = style if style in st.style_variant else '_classic_test_patch'
+
     # Plot the data
-    dplt.create_and_save_plot(stock_data, ticker, period)
+    dplt.create_and_save_plot(stock_data, ticker, period, style)
 
     # Сalculates and displays the low closing price of shares for a given period
     dd.calculate_and_display_average_price(stock_data)

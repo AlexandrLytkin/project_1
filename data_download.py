@@ -6,7 +6,7 @@ import csv
 - Содержит функции для извлечения данных об акциях из интернета и расчёта скользящего среднего."""
 
 
-def fetch_stock_data(ticker, period='1mo', start=None, end=None):
+def fetch_stock_data(ticker, period=None, start=None, end=None):
     """Получает исторические данные об акциях для указанного тикера и временного периода.
     Возвращает DataFrame с данными."""
     stock = yf.Ticker(ticker)

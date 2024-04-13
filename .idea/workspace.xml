@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="032f68b0-b423-41f5-a8cb-414d7725663c" name="Changes" comment="Изменил сохранение графика в data_plotting.py" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="task_5" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AlexandrLytkin&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d2e5e4b2-6fcd-4025-9467-37b784315be2" />
+        <option name="url" value="https://github.com/AlexandrLytkin/project_1.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2e2Mq8rRndASYjMBZ9J7MCjlvwb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.data_download.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="project_1" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="032f68b0-b423-41f5-a8cb-414d7725663c" name="Changes" comment="" />
+      <created>1711098407316</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711098407316</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Задача №2. Реализовал функционал: Уведомление о сильных колебаниях">
+      <option name="closed" value="true" />
+      <created>1711368081860</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711368081860</updated>
+    </task>
+    <task id="LOCAL-00002" summary="исправил логику функции ввода в процентах">
+      <option name="closed" value="true" />
+      <created>1711451812946</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711451812946</updated>
+    </task>
+    <task id="LOCAL-00003" summary="упростил среднее с помощью res.mean()">
+      <option name="closed" value="true" />
+      <created>1711971693184</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711971693184</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Реализовать функционал: Экспорт данных в CSV">
+      <option name="closed" value="true" />
+      <created>1711979048839</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711979048839</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Реализовать функции для расчёта и отображения на графике дополнительных технических индикаторов, например, RSI или MACD.">
+      <option name="closed" value="true" />
+      <created>1712311039431</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712311039431</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Реализовать функции для расчёта и отображения на графике дополнительных технических индикаторов, например, RSI или MACD.">
+      <option name="closed" value="true" />
+      <created>1712315664224</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712315664224</updated>
+    </task>
+    <task id="LOCAL-00007" summary="задача:&#10;&#10;Улучшенное управление временными периодами&#10;Цель:&#10;&#10;Позволить пользователю указывать конкретные даты начала и окончания для анализа, помимо предустановленных периодов.">
+      <option name="closed" value="true" />
+      <created>1712666103519</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712666103519</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Реализовал возможность выбирать стиль оформления графика. в data_plotting.py в main.py добавил input для выбора стиля">
+      <option name="closed" value="true" />
+      <created>1712862429223</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712862429223</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Добавил выбор варианта period(1) или конкретные даты(2)&#10;Переделал style c модулем">
+      <option name="closed" value="true" />
+      <created>1712865866586</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712865866586</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Добавил выбор варианта period(1) или конкретные даты(2)&#10;Переделал style c модулем">
+      <option name="closed" value="true" />
+      <created>1712865963275</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712865963275</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Изменил сохранение графика в data_plotting.py">
+      <option name="closed" value="true" />
+      <created>1712906673766</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712906673766</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Задача №2. Реализовал функционал: Уведомление о сильных колебаниях" />
+    <MESSAGE value="исправил логику функции ввода в процентах" />
+    <MESSAGE value="упростил среднее с помощью res.mean()" />
+    <MESSAGE value="Реализовать функционал: Экспорт данных в CSV" />
+    <MESSAGE value="Реализовать функции для расчёта и отображения на графике дополнительных технических индикаторов, например, RSI или MACD." />
+    <MESSAGE value="задача:&#10;&#10;Улучшенное управление временными периодами&#10;Цель:&#10;&#10;Позволить пользователю указывать конкретные даты начала и окончания для анализа, помимо предустановленных периодов." />
+    <MESSAGE value="Реализовал возможность выбирать стиль оформления графика. в data_plotting.py в main.py добавил input для выбора стиля" />
+    <MESSAGE value="Добавил выбор варианта period(1) или конкретные даты(2)&#10;Переделал style c модулем" />
+    <MESSAGE value="Изменил сохранение графика в data_plotting.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменил сохранение графика в data_plotting.py" />
+  </component>
+</project>

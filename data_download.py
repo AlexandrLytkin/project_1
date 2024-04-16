@@ -1,6 +1,6 @@
 import yfinance as yf
 import numpy as np
-import csv
+import plotly.graph_objs as go
 
 """- Отвечает за загрузку данных об акциях.
 - Содержит функции для извлечения данных об акциях из интернета и расчёта скользящего среднего."""
@@ -13,6 +13,20 @@ def fetch_stock_data(ticker, period=None, start=None, end=None):
     data = stock.history(period=period, start=start, end=end)
     data = calculate_macd(data)  # Вычисляет MACD
     return data  # Возвращает дата фрейм с данными
+
+
+def interactive_graph(data, ticker):
+    """Функция будет принимать DataFrame и вычислять среднее значение колонки 'Close'.
+     Результат будет выводиться в консоль."""
+    dates = data.index.to_numpy()
+    close_price = round(data['Close'], 2)
+    res = go.Scatter(x=dates, y=close_price, text='Data, Close Price')
+    fig = go.Figure()
+    fig.add_trace(res)
+    fig.update_layout(title=f"Интерактивный график {ticker} Цена акций с течением времени",
+                      xaxis_title="Дата",
+                      yaxis_title="Цена")
+    fig.show()
 
 
 def add_moving_average(data, window_size=5):

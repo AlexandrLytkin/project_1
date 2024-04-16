@@ -45,5 +45,7 @@ def create_and_save_plot(data, ticker, period, style, filename=None):
     if filename is None:
         filename = f"{ticker}_{period}_stock_price_chart.png"
 
+    dd.interactive_graph(data, ticker)
+
     plt.savefig(filename)
     print(f"График сохранен как {filename}")

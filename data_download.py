@@ -1,6 +1,7 @@
 import yfinance as yf
 import numpy as np
 import plotly.graph_objs as go
+import matplotlib.pyplot as plt
 
 """- Отвечает за загрузку данных об акциях.
 - Содержит функции для извлечения данных об акциях из интернета и расчёта скользящего среднего."""
@@ -16,8 +17,10 @@ def fetch_stock_data(ticker, period=None, start=None, end=None):
 
 
 def interactive_graph(data, ticker):
-    """Функция будет принимать DataFrame и вычислять среднее значение колонки 'Close'.
-     Результат будет выводиться в консоль."""
+    """ Интерактивный график использует plotly
+
+    Функция будет принимать DataFrame и вычислять среднее значение колонки 'Close'.
+    Результат будет выводиться в консоль."""
     dates = data.index.to_numpy()
     close_price = round(data['Close'], 2)
     res = go.Scatter(x=dates, y=close_price, text='Data, Close Price')
@@ -37,20 +40,26 @@ def add_moving_average(data, window_size=5):
 
 def calculate_and_display_average_price(data):
     """Функция принимает DataFrame и вычисляет среднее значение колонки 'Close'.
-    Результат будет выводиться в консоль.
+
     Вычисляет и выводит среднюю цену закрытия акций за заданный период."""
     res = data['Close']
     print('Средняя цена закрытия акций за заданный период', round(res.mean(), 2))
 
 
 def calculate_and_display_average_deviation(data):
-    """Функция для расчёта и отображения дополнительных статистических индикаторов,
-     например, стандартного отклонения цены закрытия."""
-    res = data['Close'].std()
-    return res
+    """Вывод средней цены акции
+
+    Функция для расчёта и отображения дополнительных статистических индикаторов,
+    например, стандартного отклонения цены закрытия."""
+    std = data['Close'].std()
+    plt.text(data.index[-1], data['Close'][-1], f"Std: {std:.2f}")
+    print(f"Стандартное отклонение цены закрытия акций:{std:.2f}")
+
 
 def notify_if_strong_fluctuations(data, threshold):
-    """Функция будет вычислять максимальное и минимальное значения цены закрытия и сравнивать разницу с
+    """Определение порога закрытия
+
+    Функция будет вычислять максимальное и минимальное значения цены закрытия и сравнивать разницу с
     заданным порогом. Если разница превышает порог, пользователь получает уведомление."""
     max_price = round(data['Close'].max(), 2)
     min_price = round(data['Close'].min(), 2)
@@ -60,8 +69,9 @@ def notify_if_strong_fluctuations(data, threshold):
 
 
 def export_data_to_csv(data, filename):
-    """Cохраняем загруженные данные об акциях в CSV файл.
-    Функция будет принимать DataFrame и имя файла, после чего сохранять данные в указанный файл."""
+    """Сохраняем загруженные данные об акциях в CSV файл.
+
+    Функция принимает DataFrame и имя файла, после чего сохранять данные в указанный файл."""
     try:
         data.to_csv(filename + '.csv')
         print(f'Файл сохранен в {filename}.csv')
@@ -71,6 +81,7 @@ def export_data_to_csv(data, filename):
 
 def calculate_macd(data, n_fast=12, n_slow=26):
     """Рассчитывает индикатор MACD (Moving Average Convergence Divergence).
+
     Функция для расчёта и отображения на графике дополнительных технических индикаторов MACD."""
     ema_fast = data['Close'].ewm(span=n_fast, adjust=False).mean()
     ema_slow = data['Close'].ewm(span=n_slow, adjust=False).mean()

@@ -6,7 +6,8 @@ import data_download as dd
 def create_and_save_plot(data, ticker, period, style, filename=None):
     plt.style.use(style)
     """- Отвечает за визуализацию данных.
-    - Содержит функции для создания и сохранения графиков цен закрытия и скользящих средних.
+    
+    - Содержит функции для создания и сохранения графиков цен закрытия, скользящих средних и интерактивный график.
     Создаёт график, отображающий цены закрытия и скользящие средние. Предоставляет возможность сохранения графика в
     файл. Параметр filename опционален; если он не указан, имя файла генерируется автоматически."""
     plt.figure(figsize=(10, 6))
@@ -38,14 +39,11 @@ def create_and_save_plot(data, ticker, period, style, filename=None):
     plt.ylabel("Цена")
     plt.legend()
 
-    std = dd.calculate_and_display_average_deviation(data)
-    plt.text(data.index[-1], data['Close'][-1], f"Std: {std:.2f}")
-    print(f"Стандартное отклонение цены закрытия акций:{std:.2f}")
+    dd.calculate_and_display_average_deviation(data)
+    dd.interactive_graph(data, ticker)
 
     if filename is None:
         filename = f"{ticker}_{period}_stock_price_chart.png"
-
-    dd.interactive_graph(data, ticker)
 
     plt.savefig(filename)
     print(f"График сохранен как {filename}")

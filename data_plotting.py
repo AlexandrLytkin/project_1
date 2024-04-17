@@ -3,7 +3,7 @@ import pandas as pd
 import data_download as dd
 
 
-def create_and_save_plot(data, ticker, period, style, filename=None):
+def create_and_save_plot(data, ticker: str, period: str, style: str, filename=None):
     plt.style.use(style)
     """- Отвечает за визуализацию данных.
     

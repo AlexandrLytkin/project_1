@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 - Содержит функции для извлечения данных об акциях из интернета и расчёта скользящего среднего."""
 
 
-def fetch_stock_data(ticker, period=None, start=None, end=None):
+def fetch_stock_data(ticker: str, period=None, start=None, end=None):
     """Получает исторические данные об акциях для указанного тикера и временного периода.
     Возвращает DataFrame с данными."""
     stock = yf.Ticker(ticker)
@@ -16,7 +16,7 @@ def fetch_stock_data(ticker, period=None, start=None, end=None):
     return data  # Возвращает дата фрейм с данными
 
 
-def interactive_graph(data, ticker):
+def interactive_graph(data, ticker: str):
     """ Интерактивный график использует plotly
 
     Функция будет принимать DataFrame и вычислять среднее значение колонки 'Close'.
@@ -56,7 +56,7 @@ def calculate_and_display_average_deviation(data):
     print(f"Стандартное отклонение цены закрытия акций:{std:.2f}")
 
 
-def notify_if_strong_fluctuations(data, threshold):
+def notify_if_strong_fluctuations(data, threshold: [int, float]):
     """Определение порога закрытия
 
     Функция будет вычислять максимальное и минимальное значения цены закрытия и сравнивать разницу с
@@ -68,7 +68,7 @@ def notify_if_strong_fluctuations(data, threshold):
         print(f'Цена акций колебалась более чем на заданный процент "{threshold}%" за период')
 
 
-def export_data_to_csv(data, filename):
+def export_data_to_csv(data, filename: str):
     """Сохраняем загруженные данные об акциях в CSV файл.
 
     Функция принимает DataFrame и имя файла, после чего сохранять данные в указанный файл."""

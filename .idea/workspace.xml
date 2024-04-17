@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="032f68b0-b423-41f5-a8cb-414d7725663c" name="Changes" comment="Интерактивный график, Использовал plotly" />
+    <list default="true" id="032f68b0-b423-41f5-a8cb-414d7725663c" name="Changes" comment="добавил docstring" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,18 +51,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.data_download.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "task__8",
-    "last_opened_file_path": "/Users/aleksandrlytkin/PycharmIntershipsUrbanPython/project_1",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.data_download.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;task__8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/aleksandrlytkin/PycharmIntershipsUrbanPython/project_1&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="project_1" />
@@ -230,7 +230,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713284283211</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="добавил docstring">
+      <option name="closed" value="true" />
+      <created>1713301229697</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713301229697</updated>
+    </task>
+    <task id="LOCAL-00014" summary="добавил docstring">
+      <option name="closed" value="true" />
+      <created>1713349464407</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713349464407</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -244,6 +260,7 @@
     <MESSAGE value="Добавил выбор варианта period(1) или конкретные даты(2)&#10;Переделал style c модулем" />
     <MESSAGE value="Изменил сохранение графика в data_plotting.py" />
     <MESSAGE value="Интерактивный график, Использовал plotly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Интерактивный график, Использовал plotly" />
+    <MESSAGE value="добавил docstring" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил docstring" />
   </component>
 </project>

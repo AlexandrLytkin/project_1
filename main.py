@@ -1,7 +1,7 @@
 import data_download as dd
 import data_plotting as dplt
-import datetime
 import style_variants as st
+import datetime  # short for dev
 
 
 def main():

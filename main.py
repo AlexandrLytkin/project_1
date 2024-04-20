@@ -1,11 +1,12 @@
 import data_download as dd
 import data_plotting as dplt
-import datetime
 import style_variants as st
+import datetime  # short for dev
 
 
 def main():
     """- Является точкой входа в программу.
+
     - Запрашивает у пользователя тикер акции и временной период, загружает данные,
     обрабатывает их и выводит результаты в виде графика.
     - main(): Основная функция, управляющая процессом загрузки, обработки данных и их визуализации. Запрашивает у
@@ -32,13 +33,13 @@ def main():
         period = '1y'  # short for dev
     else:
         # Start date for the analysis (optional)
-        # start_date = input("Введите начало даты (YYYY-MM-DD) для анализа биржевых данных (или оставить пустым для значения по умолчанию): ")
-        start_date = '2023-01-01'  # short for dev
+        start_date = input("Введите начало даты (YYYY-MM-DD) для анализа биржевых данных (или оставить пустым для значения по умолчанию): ")
+        # start_date = '2023-01-01'  # short for dev
 
         # End date for the analysis (optional)
-        # end_date = input("Введите конец даты (YYYY-MM-DD) для анализа биржевых данных (или оставить пустым для значения по умолчанию): ")
-        today = datetime.date.today()  # short for dev
-        end_date = today  # short for dev
+        end_date = input("Введите конец даты (YYYY-MM-DD) для анализа биржевых данных (или оставить пустым для значения по умолчанию): ")
+        # today = datetime.date.today()  # short for dev
+        # end_date = today  # short for dev
 
     # Check max and min values in percent threshold
     # threshold = int(input("Введите процентный порог колебания акции от мин к мак (например 1, 3, 5, ...):"))
@@ -61,7 +62,7 @@ def main():
     # Plot the data
     dplt.create_and_save_plot(stock_data, ticker, period, style)
 
-    # Сalculates and displays the low closing price of shares for a given period
+    # Calculates and displays the low closing price of shares for a given period
     dd.calculate_and_display_average_price(stock_data)
 
     # Notification about strong hesitates
